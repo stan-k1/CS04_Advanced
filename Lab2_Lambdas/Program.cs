@@ -22,9 +22,16 @@ namespace Lab2_Lambdas
             Process(2, 5, multiply);
 
             //Alternative with user defined delegate
+            Console.WriteLine();
+
             MathOp add2 = (x, y) => x + y;
             MathOp subtract2 = (x, y) => x - y;
             MathOp multiply2 = (x, y) => x * y;
+
+            Process2(5, 5, add2);
+            Process2(5, 5, subtract2);
+            Process2(5, 5, multiply2);
+            Process2(2, 5, multiply2);
         }
 
         public static int Process(int x, int y, Func<int, int, int> op)

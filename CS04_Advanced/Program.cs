@@ -70,6 +70,8 @@ namespace CS04_Advanced
 
         static void Main(string[] args)
         {
+            //Indexers
+
             Cat Cadife = new Cat() { Name = "Cadife", Age = 10, Colors = new List<string>(){"Black", "Brown"}};
             Cat Kitty = new Cat() { Name = "Kitty", Age = 0, Colors = new List<string>() { "Grey" }} ;
             Console.WriteLine(Cadife[1]); //Brown
@@ -101,6 +103,8 @@ namespace CS04_Advanced
             IncrementC();
             Console.WriteLine(c); //5
 
+            //SEP
+            
             Console.WriteLine(Double(5));
             TaskContainerSEP taskContainer = new TaskContainerSEP();
             taskContainer.TaskPerformed += TaskResultAnnouncer;
@@ -134,6 +138,7 @@ namespace CS04_Advanced
             Animal Annie = animalDel("Annie"); 
             Console.WriteLine(Annie.Name); //Annie
 
+            //Delegates
 
             GenericDelegate<int, string> intDelegate = DoubleInput;
             
@@ -152,6 +157,8 @@ namespace CS04_Advanced
 
             //Console.WriteLine(myDelegate(1, "Call to DoubleInput() Completed!"));
 
+            //ArrayOperations Example (Audience Question 2)
+
             List<int> operatedNumbers = IntArrayOperation(new int[] { 5, 10, 20 }, myDelegate);
 
             foreach (var num in operatedNumbers)
@@ -167,9 +174,13 @@ namespace CS04_Advanced
                 Console.WriteLine(num); //15, 30, 60
             }
 
+            //Other delegates
+
             NumDelegate del = FullDouble;
             Func<int, int> systemDel= FullDouble;
         }
+
+        //Methods for the other delegates
 
         //public static int NoDouble = x => x + 1;
 
